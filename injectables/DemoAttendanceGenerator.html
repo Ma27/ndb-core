@@ -1,0 +1,1203 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>ndb-core documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">ndb-core documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content injectable">
+                   <div class="content-data">
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Injectables</li>
+  <li>DemoAttendanceGenerator</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/app/demo-data/demo-data-generators/demo-attendance-generator.service.ts</code>
+        </p>
+
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>Generate AttendanceMonth entities for the last 15 months
+Builds upon the generated demo Child entities.</p>
+
+            </p>
+
+            <p class="comment">
+                <h3>Extends</h3>
+            </p>
+            <p class="comment">
+                        <code><a href="../classes/DemoDataGenerator.html" target="_self" >DemoDataGenerator</a></code>
+            </p>
+
+
+            <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Protected</span>
+                                <a href="#_entities">_entities</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#generateAttendanceRecordsForChild">generateAttendanceRecordsForChild</a>
+                            </li>
+                            <li>
+                                <a href="#generateEntities">generateEntities</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#generateRecord">generateRecord</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Static</span>
+                                <a href="#isHoliday">isHoliday</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Static</span>
+                                <a href="#provider">provider</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#selectNextAttendanceProfile">selectNextAttendanceProfile</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#setDayAttendance">setDayAttendance</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Protected</span>
+                                    <span class="modifier">Abstract</span>
+                                <a href="#generateEntities">generateEntities</a>
+                            </li>
+                            <li>
+                                <a href="#getEarlierDateOrToday">getEarlierDateOrToday</a>
+                            </li>
+                            <li>
+                                <a href="#reset">reset</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+            <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(demoChildren: <a href="../injectables/DemoChildGenerator.html">DemoChildGenerator</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="97" class="link-to-prism">src/app/demo-data/demo-data-generators/demo-attendance-generator.service.ts:97</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>demoChildren</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/DemoChildGenerator.html" target="_self" >DemoChildGenerator</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+            <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="generateAttendanceRecordsForChild"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            generateAttendanceRecordsForChild
+                        </b>
+                        <a href="#generateAttendanceRecordsForChild"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>generateAttendanceRecordsForChild(child: <a href="../classes/Child.html">Child</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="113"
+                            class="link-to-prism">src/app/demo-data/demo-data-generators/demo-attendance-generator.service.ts:113</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>child</td>
+                                    <td>
+                                                <code><a href="../classes/Child.html" target="_self" >Child</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/AttendanceMonth.html" target="_self" >AttendanceMonth[]</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="generateEntities"></a>
+                    <span class="name">
+                        <b>
+                            generateEntities
+                        </b>
+                        <a href="#generateEntities"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>generateEntities()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="103"
+                            class="link-to-prism">src/app/demo-data/demo-data-generators/demo-attendance-generator.service.ts:103</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/AttendanceMonth.html" target="_self" >AttendanceMonth[]</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="generateRecord"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            generateRecord
+                        </b>
+                        <a href="#generateRecord"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>generateRecord(child: <a href="../classes/Child.html">Child</a>, month: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date" target="_blank">Date</a>, institution: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, attendanceProfile: <a href="../interfaces/AttendanceProfile.html">AttendanceProfile</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="140"
+                            class="link-to-prism">src/app/demo-data/demo-data-generators/demo-attendance-generator.service.ts:140</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>child</td>
+                                    <td>
+                                                <code><a href="../classes/Child.html" target="_self" >Child</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>month</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date" target="_blank" >Date</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>institution</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>attendanceProfile</td>
+                                    <td>
+                                                <code><a href="../interfaces/AttendanceProfile.html" target="_self" >AttendanceProfile</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="isHoliday"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Static</span>
+                            isHoliday
+                        </b>
+                        <a href="#isHoliday"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>isHoliday(date: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date" target="_blank">Date</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="64"
+                            class="link-to-prism">src/app/demo-data/demo-data-generators/demo-attendance-generator.service.ts:64</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>date</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date" target="_blank" >Date</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="provider"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Static</span>
+                            provider
+                        </b>
+                        <a href="#provider"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>provider()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="58"
+                            class="link-to-prism">src/app/demo-data/demo-data-generators/demo-attendance-generator.service.ts:58</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>This function returns a provider object to be used in an Angular Module configuration:
+   <code>providers: [DemoAttendanceGenerator.provider()]</code></p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>{}</code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="selectNextAttendanceProfile"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            selectNextAttendanceProfile
+                        </b>
+                        <a href="#selectNextAttendanceProfile"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>selectNextAttendanceProfile(previousAttendanceProfile: <a href="../interfaces/AttendanceProfile.html">AttendanceProfile</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="186"
+                            class="link-to-prism">src/app/demo-data/demo-data-generators/demo-attendance-generator.service.ts:186</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Select a new attendance profile (likelihood for absences, etc.).
+It&#39;s most likely the profile will remain the same as in previous month.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>previousAttendanceProfile</td>
+                                    <td>
+                                                <code><a href="../interfaces/AttendanceProfile.html" target="_self" >AttendanceProfile</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="setDayAttendance"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            setDayAttendance
+                        </b>
+                        <a href="#setDayAttendance"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>setDayAttendance(attendanceDay: <a href="../classes/AttendanceDay.html">AttendanceDay</a>, includeSaturday: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank">boolean</a>, attendanceProfile: <a href="../interfaces/AttendanceProfile.html">AttendanceProfile</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="151"
+                            class="link-to-prism">src/app/demo-data/demo-data-generators/demo-attendance-generator.service.ts:151</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>attendanceDay</td>
+                                    <td>
+                                                <code><a href="../classes/AttendanceDay.html" target="_self" >AttendanceDay</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>includeSaturday</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>attendanceProfile</td>
+                                    <td>
+                                                <code><a href="../interfaces/AttendanceProfile.html" target="_self" >AttendanceProfile</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="generateEntities"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Protected</span>
+                            <span class="modifier">Abstract</span>
+                            generateEntities
+                        </b>
+                        <a href="#generateEntities"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>generateEntities()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Inherited from         <code><a href="../classes/DemoDataGenerator.html" target="_self" >DemoDataGenerator</a></code>
+</div>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-line">Defined in         <code><a href="../classes/DemoDataGenerator.html#source" target="_self" >DemoDataGenerator:13</a></code>
+</div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>T[]</code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getEarlierDateOrToday"></a>
+                    <span class="name">
+                        <b>
+                            getEarlierDateOrToday
+                        </b>
+                        <a href="#getEarlierDateOrToday"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getEarlierDateOrToday(date: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date" target="_blank">Date</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Inherited from         <code><a href="../classes/DemoDataGenerator.html" target="_self" >DemoDataGenerator</a></code>
+</div>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-line">Defined in         <code><a href="../classes/DemoDataGenerator.html#source" target="_self" >DemoDataGenerator:25</a></code>
+</div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Return the given date if it is defined and earlier than today&#39;s date
+otherwise return a Date representing today.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>date</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date" target="_blank" >Date</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>The date to be compared</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date" target="_blank" >Date</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="reset"></a>
+                    <span class="name">
+                        <b>
+                            reset
+                        </b>
+                        <a href="#reset"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>reset()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Inherited from         <code><a href="../classes/DemoDataGenerator.html" target="_self" >DemoDataGenerator</a></code>
+</div>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-line">Defined in         <code><a href="../classes/DemoDataGenerator.html#source" target="_self" >DemoDataGenerator:15</a></code>
+</div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+            <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="_entities"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Protected</span>
+                            _entities</b>
+                            <a href="#_entities"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>T[]</code>
+
+                        </td>
+                    </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Inherited from         <code><a href="../classes/DemoDataGenerator.html" target="_self" >DemoDataGenerator</a></code>
+</div>
+                                </td>
+                            </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in         <code><a href="../classes/DemoDataGenerator.html#source" target="_self" >DemoDataGenerator:5</a></code>
+</div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {DemoChildGenerator} from &#x27;./demo-child-generator.service&#x27;;
+import {DemoDataGenerator} from &#x27;../demo-data-generator&#x27;;
+import {Injectable} from &#x27;@angular/core&#x27;;
+import {Child} from &#x27;../../children/child&#x27;;
+import {faker} from &#x27;../faker&#x27;;
+import {AttendanceMonth} from &#x27;../../children/attendance/attendance-month&#x27;;
+import {AttendanceDay, AttendanceStatus} from &#x27;../../children/attendance/attendance-day&#x27;;
+
+interface AttendanceProfile {
+  id: number;
+  present: number;
+  excused: number;
+  late: number;
+  absent: number;
+}
+
+const ATTENDANCE_PROFILES: AttendanceProfile[] &#x3D; [
+  {
+    id: 0,
+    present: 94,
+    excused: 3,
+    late: 1,
+    absent: 2,
+  },
+  {
+    id: 1,
+    present: 80,
+    excused: 5,
+    late: 5,
+    absent: 10,
+  },
+  {
+    id: 2,
+    present: 70,
+    excused: 5,
+    late: 10,
+    absent: 15,
+  },
+  {
+    id: 3,
+    present: 50,
+    excused: 5,
+    late: 5,
+    absent: 40,
+  },
+];
+
+/**
+ * Generate AttendanceMonth entities for the last 15 months
+ * Builds upon the generated demo Child entities.
+ */
+@Injectable()
+export class DemoAttendanceGenerator extends DemoDataGenerator&lt;AttendanceMonth&gt; {
+  /**
+   * This function returns a provider object to be used in an Angular Module configuration:
+   *   &#x60;providers: [DemoAttendanceGenerator.provider()]&#x60;
+   */
+  static provider() {
+    return [
+      { provide: DemoAttendanceGenerator, useClass: DemoAttendanceGenerator },
+    ];
+  }
+
+  public static isHoliday(date: Date) {
+    switch (date.getMonth()) {
+      case 0:
+        return (date.getDate() &gt;&#x3D; 1 &amp;&amp; date.getDate() &lt;&#x3D; 6)
+            || (date.getDate() &#x3D;&#x3D;&#x3D; 23)
+            || (date.getDate() &#x3D;&#x3D;&#x3D; 26);
+      case 2:
+        return (date.getDate() &#x3D;&#x3D;&#x3D; 4)
+            || (date.getDate() &gt;&#x3D; 20 &amp;&amp; date.getDate() &lt;&#x3D; 21);
+      case 3:
+        return (date.getDate() &#x3D;&#x3D;&#x3D; 15)
+            || (date.getDate() &gt;&#x3D; 20 &amp;&amp; date.getDate() &lt;&#x3D; 21);
+      case 4:
+        return (date.getDate() &#x3D;&#x3D;&#x3D; 1)
+            || (date.getDate() &gt;&#x3D; 23);
+      case 5:
+        return (date.getDate() &lt;&#x3D; 21);
+      case 6:
+        return (date.getDate() &#x3D;&#x3D;&#x3D; 4);
+      case 7:
+        return (date.getDate() &#x3D;&#x3D;&#x3D; 15);
+      case 8:
+        return (date.getDate() &#x3D;&#x3D;&#x3D; 11);
+      case 9:
+        return (date.getDate() &gt;&#x3D; 5 &amp;&amp; date.getDate() &lt;&#x3D; 16);
+      case 10:
+        return (date.getDate() &#x3D;&#x3D;&#x3D; 2)
+            || (date.getDate() &#x3D;&#x3D;&#x3D; 10);
+      case 11:
+        return (date.getDate() &gt;&#x3D; 24);
+    }
+
+    return false;
+  }
+
+  constructor(private demoChildren: DemoChildGenerator) {
+    super();
+  }
+
+  generateEntities(): AttendanceMonth[] {
+    const data &#x3D; [];
+
+    for (const child of this.demoChildren.entities) {
+      data.push(...this.generateAttendanceRecordsForChild(child as Child));
+    }
+
+    return data;
+  }
+
+  private generateAttendanceRecordsForChild(child: Child): AttendanceMonth[] {
+    const data &#x3D; [];
+
+    const finalMonth &#x3D; this.getEarlierDateOrToday(child.dropoutDate);
+    finalMonth.setDate(1);
+
+    const month &#x3D; new Date();
+    month.setDate(1);
+    month.setMonth(month.getMonth() - 15);
+    if (child.admissionDate &gt; month) {
+      month.setMonth(child.admissionDate.getMonth());
+      month.setFullYear(child.admissionDate.getFullYear());
+    }
+
+    let attendanceProfile &#x3D; undefined;
+    while (month &lt;&#x3D; finalMonth) {
+      attendanceProfile &#x3D; this.selectNextAttendanceProfile(attendanceProfile);
+
+      data.push(this.generateRecord(child, new Date(month.toISOString()), &#x27;school&#x27;, attendanceProfile));
+      data.push(this.generateRecord(child, new Date(month.toISOString()), &#x27;coaching&#x27;, attendanceProfile));
+
+      month.setMonth(month.getMonth() + 1);
+    }
+
+    return data;
+  }
+
+  private generateRecord(child: Child, month: Date, institution: string, attendanceProfile: AttendanceProfile) {
+    const attendanceMonth &#x3D; new AttendanceMonth(faker.random.uuid());
+    attendanceMonth.month &#x3D; month;
+    attendanceMonth.student &#x3D; child.getId();
+    attendanceMonth.institution &#x3D; institution;
+    attendanceMonth.dailyRegister.forEach(attendanceDay &#x3D;&gt;
+      this.setDayAttendance(attendanceDay, institution !&#x3D;&#x3D; &#x27;school&#x27;, attendanceProfile)
+    );
+    return attendanceMonth;
+  }
+
+  private setDayAttendance(attendanceDay: AttendanceDay, includeSaturday: boolean, attendanceProfile: AttendanceProfile) {
+    if (attendanceDay.date &gt; new Date()) {
+      return;
+    }
+
+    if (attendanceDay.date.getDay() &#x3D;&#x3D;&#x3D; 0 // Sunday
+        || (!includeSaturday &amp;&amp; attendanceDay.date.getDay() &#x3D;&#x3D;&#x3D; 6) // Saturday
+    ) {
+      return;
+    }
+
+    if (DemoAttendanceGenerator.isHoliday(attendanceDay.date)) {
+      attendanceDay.status &#x3D; AttendanceStatus.HOLIDAY;
+      return;
+    }
+
+    const random &#x3D; faker.random.number(100);
+    if (random &lt; attendanceProfile.present) {
+      attendanceDay.status &#x3D; AttendanceStatus.PRESENT;
+    } else if (random &lt; attendanceProfile.present + attendanceProfile.excused) {
+      attendanceDay.status &#x3D; AttendanceStatus.EXCUSED;
+      attendanceDay.remarks &#x3D;
+        faker.random.arrayElement([&#x27;fever&#x27;, &#x27;cough&#x27;, &#x27;death in family&#x27;, &#x27;family out of town&#x27;]);
+    } else if (random &lt; attendanceProfile.present + attendanceProfile.excused + attendanceProfile.late) {
+      attendanceDay.status &#x3D; AttendanceStatus.LATE;
+    } else {
+      attendanceDay.status &#x3D; AttendanceStatus.ABSENT;
+    }
+  }
+
+  /**
+   * Select a new attendance profile (likelihood for absences, etc.).
+   * It&#x27;s most likely the profile will remain the same as in previous month.
+   * @param previousAttendanceProfile
+   */
+  private selectNextAttendanceProfile(previousAttendanceProfile: AttendanceProfile) {
+    if (!previousAttendanceProfile) {
+      return faker.random.arrayElement(ATTENDANCE_PROFILES);
+    }
+
+    if (faker.random.number(100) &lt; 80) {
+      return previousAttendanceProfile;
+    } else {
+      return faker.random.arrayElement(ATTENDANCE_PROFILES);
+    }
+  }
+}
+</code></pre>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
+            var COMPODOC_CURRENT_PAGE_URL = 'DemoAttendanceGenerator.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
